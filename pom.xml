@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>red.htt</groupId>
-    <artifactId>excles</artifactId>
-    <version>0.1</version>
+    <artifactId>excels</artifactId>
+    <version>0.2</version>
 
-    <name>excles</name>
-    <url>http://www.example.com</url>
+    <name>excels</name>
+    <url>https://github.com/renchangjiu/excels</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -23,12 +23,6 @@
             <artifactId>junit</artifactId>
             <version>4.11</version>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.20</version>
-            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -53,7 +47,30 @@
         </dependency>
     </dependencies>
 
-    <build>
 
-    </build>
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <scm>
+        <tag>master</tag>
+        <url>git@github.com:renchangjiu/excels.git</url>
+        <connection>scm:git:git@github.com:renchangjiu/excels.git</connection>
+        <developerConnection>scm:git:git@github.com:renchangjiu/excels.git</developerConnection>
+    </scm>
+    <developers>
+        <developer>
+            <name>yui</name>
+            <email>i@htt.red</email>
+            <organization>red.htt</organization>
+        </developer>
+    </developers>
 </project>

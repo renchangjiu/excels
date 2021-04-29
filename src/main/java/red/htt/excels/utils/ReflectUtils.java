@@ -55,6 +55,10 @@ public class ReflectUtils {
 
     /**
      * 直接读取对象属性值, 无视private/protected修饰符, 不经过getter函数.
+     *
+     * @param obj       obj
+     * @param fieldName fieldName
+     * @return E
      */
     @SuppressWarnings("unchecked")
     public static <E> E getFieldValue(final Object obj, final String fieldName) {
@@ -74,6 +78,10 @@ public class ReflectUtils {
 
     /**
      * 直接设置对象属性值, 无视private/protected修饰符, 不经过setter函数.
+     *
+     * @param obj       obj
+     * @param fieldName fieldName
+     * @param value     value
      */
     public static <E> void setFieldValue(final Object obj, final String fieldName, final E value) {
         Field field = getAccessibleField(obj, fieldName);
@@ -93,6 +101,11 @@ public class ReflectUtils {
      * 直接调用对象方法, 无视private/protected修饰符.
      * 用于一次性调用的情况，否则应使用getAccessibleMethod()函数获得Method后反复调用.
      * 同时匹配方法名+参数类型，
+     *
+     * @param obj            obj
+     * @param methodName     methodName
+     * @param parameterTypes parameterTypes
+     * @return E e
      */
     @SuppressWarnings("unchecked")
     public static <E> E invokeMethod(final Object obj, final String methodName, final Class<?>[] parameterTypes,
@@ -306,6 +319,10 @@ public class ReflectUtils {
 
     /**
      * 将反射时的checked exception转换为unchecked exception.
+     *
+     * @param msg msg
+     * @param e   e
+     * @return RuntimeException
      */
     public static RuntimeException convertReflectionExceptionToUnchecked(String msg, Exception e) {
         if (e instanceof IllegalAccessException || e instanceof IllegalArgumentException
